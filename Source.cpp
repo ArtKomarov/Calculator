@@ -67,10 +67,7 @@ public:
     }
 
     void Construct(int type, nod_val val, Node* left, Node* right) {
-        assert(left  != NULL);
-        assert(right != NULL);
         switch(type) {
-        case NUM:
         case OP:
             this->type  = type;
             this->val   = val;
@@ -78,8 +75,12 @@ public:
             this->right = right;
             break;
         case VAR:
-            fprintf(stderr, "Node::Construct for operation & numbers used for variable!\n");
+            fprintf(stderr, "Node::Construct for operation used for variable!\n");
             Construct(type);
+            break;
+        case NUM:
+            fprintf(stderr, "Node::Construct for operation used for number!\n");
+            Construct(type, val);
             break;
         default:
             fprintf(stderr, "Node::Construct: unknown type!\n");
