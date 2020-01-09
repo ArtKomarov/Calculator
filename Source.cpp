@@ -5,7 +5,7 @@
  *      Author: artem
  */
 
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <string.h>
 #include <assert.h>
@@ -532,4 +532,4 @@ int main(int argc, char* argv[]) {
     }
     printf("Ответ: %d\n", a.tree->TreeCount());
     return 0;
-}
+}*/
